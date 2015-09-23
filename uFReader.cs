@@ -40,22 +40,26 @@ namespace uFCoder_DEMO_PC2Phone_NFC
             System.Threading.Thread.Sleep(20);
 
             status = uFCoder.EnterShareRamCommMode();
-            
+
             System.Threading.Thread.Sleep(20);
             
             if (status == DL_STATUS.DL_OK)
                 status = uFCoder.TagEmulationStart();
-            
-            System.Threading.Thread.Sleep(20);
+
+            System.Threading.Thread.Sleep(300);
 
             return status == DL_STATUS.DL_OK;
         }
 
         public bool stopEmulation()
         {
-            status = uFCoder.TagEmulationStop();
+            DL_STATUS stat1;
 
-            status = uFCoder.ExitShareRamCommMode();
+            stat1 = uFCoder.ExitShareRamCommMode();
+
+            System.Threading.Thread.Sleep(100);
+
+            status = uFCoder.TagEmulationStop();
 
             return status == DL_STATUS.DL_OK;
         }

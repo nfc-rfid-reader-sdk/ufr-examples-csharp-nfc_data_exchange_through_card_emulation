@@ -29,8 +29,8 @@ namespace uFCoder_DEMO_PC2Phone_NFC
         {
             if (!ufr.open())
             {
-                //statusLabel.Text = "Reader opening error : " + ufr.getLastError();
-                statusLabel.Text = "Reader did not open";
+                statusLabel.Text = "Reader opening error : " + ufr.getLastError();
+                //statusLabel.Text = "Reader did not open";
                 return;
             }
 
@@ -39,8 +39,8 @@ namespace uFCoder_DEMO_PC2Phone_NFC
             // start emulation
             if (!ufr.startEmulation())
             {
-                //statusLabel.Text = "Reader can not enter in Emulation mode. Error : " + ufr.getLastError();
-                statusLabel.Text = "Reader did not open";
+                statusLabel.Text = "Reader can not enter in Emulation mode. Error : " + ufr.getLastError();
+                //statusLabel.Text = "Reader did not open";
                 ufr.close();
                 return;
             }
@@ -49,8 +49,8 @@ namespace uFCoder_DEMO_PC2Phone_NFC
             Array.Clear(dataTx, 0, dataTx.Length);
             if (!ufr.writeShared(address, dataTx))
             {
-                //statusLabel.Text = "Reader can not initialise NFC data communication. Error : " + ufr.getLastError();
-                statusLabel.Text = "Reader did not open";
+                statusLabel.Text = "Reader can not initialise NFC data communication. Error : " + ufr.getLastError();
+                //statusLabel.Text = "Reader did not open";
                 ufr.close();
                 return;
             }
@@ -79,6 +79,8 @@ namespace uFCoder_DEMO_PC2Phone_NFC
 
             bReaderOpen.Enabled = !bReaderOpen.Enabled;
             bReaderClose.Enabled = !bReaderOpen.Enabled;
+
+            statusLabel.Text = "Reader closed";
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
