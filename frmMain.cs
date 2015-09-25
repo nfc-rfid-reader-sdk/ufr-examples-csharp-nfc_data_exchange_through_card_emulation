@@ -23,10 +23,15 @@ namespace uFCoder_DEMO_PC2Phone_NFC
         public frmMain()
         {
             InitializeComponent();
+
+            //statusLabel.Text = 
         }
 
         private void bReaderOpen_Click(object sender, EventArgs e)
         {
+            statusLabel.Text = "In progress...";
+            statusStrip1.Update();
+
             if (!ufr.open())
             {
                 statusLabel.Text = "Reader opening error : " + ufr.getLastError();
@@ -35,6 +40,7 @@ namespace uFCoder_DEMO_PC2Phone_NFC
             }
 
             // open ok
+
 
             // start emulation
             if (!ufr.startEmulation())

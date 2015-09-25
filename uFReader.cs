@@ -16,6 +16,12 @@ namespace uFCoder_DEMO_PC2Phone_NFC
 
         }
 
+        public static string getDLLVersion()
+        {
+            //return uFCoder.
+            return null;
+        }
+
         public string getLastError()
         {
             return status.ToString();
@@ -46,7 +52,10 @@ namespace uFCoder_DEMO_PC2Phone_NFC
             if (status == DL_STATUS.DL_OK)
                 status = uFCoder.TagEmulationStart();
 
-            System.Threading.Thread.Sleep(300);
+            if (status == DL_STATUS.DL_OK)
+            {
+                System.Threading.Thread.Sleep(1000);
+            }
 
             return status == DL_STATUS.DL_OK;
         }
