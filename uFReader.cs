@@ -43,18 +43,18 @@ namespace uFCoder_DEMO_PC2Phone_NFC
 
         public bool startEmulation()
         {
-            System.Threading.Thread.Sleep(20);
+            System.Threading.Thread.Sleep(50);
 
             status = uFCoder.EnterShareRamCommMode();
 
-            System.Threading.Thread.Sleep(20);
+            System.Threading.Thread.Sleep(50);
             
             if (status == DL_STATUS.DL_OK)
                 status = uFCoder.TagEmulationStart();
 
             if (status == DL_STATUS.DL_OK)
             {
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(1350);
             }
 
             return status == DL_STATUS.DL_OK;

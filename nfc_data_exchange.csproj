@@ -27,7 +27,7 @@
     <PublisherName>Digital Logic</PublisherName>
     <SuiteName>NFC Data Exchange</SuiteName>
     <ApplicationRevision>9</ApplicationRevision>
-    <ApplicationVersion>1.1.0.9</ApplicationVersion>
+    <ApplicationVersion>1.2.0.9</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -115,9 +115,7 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />

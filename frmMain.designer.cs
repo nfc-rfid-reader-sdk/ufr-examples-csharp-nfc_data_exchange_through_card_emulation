@@ -202,7 +202,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmMain";
-            this.Text = "NFC Data Exchange v1.1.0.0";
+            this.Text = "NFC Data Exchange v1.2.0.0";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
