@@ -124,6 +124,7 @@ namespace uFCoder_DEMO_PC2Phone_NFC
             ok = ufr.readShared(address, dataRx);
 
             if (!ok)
+
             {
                 statusLabel.Text = "[" + cnt + "] Read Error : " + ufr.getLastError();
                 eMsgPhone.Text = "";
@@ -177,6 +178,16 @@ namespace uFCoder_DEMO_PC2Phone_NFC
 
             Array.Clear(data, 0, data.Length);
             Array.Copy(lastText, dataTx, lastText.Length);
+        }
+
+        private void linkAndroidSoftware_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.d-logic.net/code/nfc-rfid-reader-sdk/ufr-examples-android-nfc_data_exchange_through_card_emulation.git");
+        }
+
+        private void linkiOSSoftware_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.d-logic.net/code/nfc-rfid-reader-sdk/ufr-examples-ios-nfc_data_exchange_through_card_emulation.git");
         }
     }
 }
